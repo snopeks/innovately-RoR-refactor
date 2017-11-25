@@ -1,0 +1,9 @@
+<%= form_for @blog do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: "Title" %>
+  </div>
+  <div>
+    <%= f.text_field :content, placeholder: "Write here!" %>
+  </div>
+  <%= f.submit %>
+<% end %>
