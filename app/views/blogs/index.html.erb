@@ -1,2 +1,6 @@
-<h1>Blogs#index</h1>
-<p>Find me in app/views/blogs/index.html.erb</p>
+<div>
+  <% current_user.blogs().each do |b| %>
+    <h3><%= b.title %> </h3>
+    <p><%= b.content %> </p>
+  <% end %>
+</div> 

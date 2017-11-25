@@ -9,28 +9,8 @@
   </head>
 
   <body>
-    <nav>
-      <h1><%= link_to "Innovately", "/"%></h1>
-      <div>
-        <ul>
-          <% if current_user %>
-            <li><%= link_to "Profile", current_user %>
-            <li><%= link_to "Blogs", "/users/:user_id/blogs" %>
-            <li><%= link_to "Logout", "/logout" %>
-          <% else %>
-            <li><%= link_to "Login", "/login" %></li>
-            <li><%= link_to "Signup", "/new"%></li>
-            <li>About</li>
-          <% end %>
-        </ul>
-      </div>
-    </nav>
+    <%= render 'layouts/header' %>
     <%= yield %>
-    <footer>
-      <div>
-        <p>Copyright 2017</p>
-        <p>By creativesnopeks</p>
-      </div>
-    </footer>
+    <%= render 'layouts/footer' %> 
   </body>
 </html>
