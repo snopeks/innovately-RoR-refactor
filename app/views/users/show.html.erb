@@ -1,0 +1,14 @@
+<h1>Your profile</h1>
+<div>
+  Welcome, <%= @user.name %>!
+</div>
+<h3> Your blogs</h3>
+  <ul>
+    <% @user.blogs().each do |blog|%>
+      <li> <%= blog.title %></li>
+      <%= link_to "User blogs" %> 
+    <% end %>
+  </ul>
+<div>
+
+
