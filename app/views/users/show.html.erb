@@ -3,7 +3,7 @@
   Welcome, <%= @user.name %>!
 </div>
 <h3> Your blogs</h3>
-<%= link_to "New Blogpost", "/blogs/new" %>
+<%= link_to "New Blogpost", "/users/:id/blogs/new" %>
   <ul>
     <% @user.blogs().each do |blog|%>
       <li> <%= blog.title %></li>
