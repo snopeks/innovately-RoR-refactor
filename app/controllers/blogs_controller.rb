@@ -13,6 +13,8 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.create(blog_params)
+    current_user.blogs << @blog
+    redirect_to current_user
   end
 
   def edit
