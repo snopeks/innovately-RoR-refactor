@@ -1,6 +1,15 @@
-<div>
-  <% current_user.blogs().each do |b| %>
-    <h3><%= b.title %> </h3>
-    <p><%= b.content %> </p>
-  <% end %>
-</div> 
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <% current_user.blogs().each do |b|%>
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title"><%= b.title %> </h4>
+            <p class="card-text"><%= b.content %> </p>
+            <%= link_to "Edit Blog" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,22 +1,15 @@
-<h2>Your profile</h2>
-<div>
-  Welcome, <%= @user.name %>!
-</div>
-<h3> Your blogs</h3>
-<%= link_to "New Blogpost", "/users/:id/blogs/new" %>
-  <ul>
-    <% @user.blogs().each do |blog|%>
-      <li> <%= blog.title %></li>
-    <% end %>
-  </ul>
-<div>
-
-
-<div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<h3>Your profile</h3>
+<div class="row">
+  <div class="col-sm-4">
+    <p> Hi, <%= current_user.name %>!</p>
+  </div>
+  <div class="col-sm-4">
+    <p> You have logged <%= current_user.blogs().length %> ideas!</p>
+  </div>
+  <div class="col-sm-4">
+    <%= link_to "New Idea", "/users/:id/blogs/new" %>
   </div>
 </div>
+
+
+
