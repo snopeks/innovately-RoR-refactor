@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create"
   get "/users/:id/blogs/new", to: "blogs#new", as: "new_blog"
   post "/blogs", to: "blogs#create"
-  get "/users/:id/blogs", to: "blogs#index", as: "user_blogs"
+  get "/users/:id/ideas", to: "blogs#index", as: "user_blogs"
 end
