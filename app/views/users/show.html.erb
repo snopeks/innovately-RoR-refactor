@@ -1,13 +1,31 @@
-<h3>Your profile</h3>
-<div class="row">
-  <div class="col-sm-4">
-    <p> Hi, <%= current_user.name %>!</p>
-  </div>
-  <div class="col-sm-4">
-    <p> You have logged <%= current_user.blogs().length %> ideas!</p>
-  </div>
-  <div class="col-sm-4">
-    <%= link_to "New Idea", "/users/:id/blogs/new" %>
+<div class="container profile-container">
+  <div id="profile" class="row">
+    <h3>Your profile</h3>
+    <div class="col-sm-4">
+      <p> Hi, <%= current_user.name %>!</p>
+      <p> Your email: <%= current_user.email %> </p>
+    </div>
+    <div class="col-sm-4">
+      <p> You have logged <%= current_user.blogs().length %> ideas!</p>
+      <div class="card profile-card" style="width: 20rem;">
+        <ul class="list-group list-group-flush">
+          <% current_user.blogs().each do |b| %>
+          <li class="list-group-item"><%=b.title%> </li>
+          <% end %>
+        </ul>
+        <p><%= link_to "Create New Idea", new_idea_path %></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p> Favorite Ideas </p>
+      <div class="card" style="width: 20rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Fav idea 1</li>
+          <li class="list-group-item">Fav idea 2</li>
+          <li class="list-group-item">Fav idea 3</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 

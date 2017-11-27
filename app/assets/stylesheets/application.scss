@@ -13,3 +13,160 @@
 */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+html {
+  height: 100%;
+}
+body {
+  background-color: darkgrey;
+  height: 100%;
+}
+
+ .jumbotron{
+   background-image: url("innovate.jpg");
+   background-size: 100%;
+   background-repeat: no-repeat;
+   min-height: 5rem;
+ }
+
+.jumbotron h1 {
+  text-align: center;
+  color: darkorange;
+}
+.jumbotron p {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+}
+
+#main-nav {
+  float: clear;
+  background-color: black;
+  margin-bottom: 0;
+}
+.header-brand {
+  float: left;
+  color: white;
+  font-size: 5rem;
+}
+ul.nav.navbar-nav {
+  padding-top: 20px;
+  float: right;
+}
+.profile-container {
+  width: 100%;
+  padding: none;
+}
+#profile {
+  min-height: 500px;
+  background-color: white;
+}
+
+#profile h3 {
+  text-align: left;
+  padding: 10px;
+}
+.login-container {
+  background-color: white;
+  display: table;
+  width: 100%;
+  min-height: 75%;
+}
+.login-form {
+  text-align: left;
+  display: block;
+  width: 25%;
+  min-height: 150px;
+  margin: 0 auto;
+}
+.ideas {
+
+  width: 100%;
+
+}
+.profile-card{
+
+}
+.idea-card{
+  background-color: white;
+  height: 150px;
+  padding: 0;
+  overflow: scroll;
+  border: 2px solid grey;
+  color: black;
+  margin: 1rem;
+}
+.card-col {
+  padding: 0;
+}
+
+div .card-body {
+  margin: 0.5rem;
+
+  padding: 10px;
+}
+
+.signup-container {
+  background-color: white;
+  display: table;
+  width: 100%;
+  min-height: 75%;
+}
+.signup-form {
+  display: block;
+  width: 25%;
+  margin: 0 auto;
+  min-height: 150px;
+}
+.new-idea-container {
+  background-color: white;
+  width: 88%;
+  min-height: 75%;
+}
+
+.service-item {
+  background-color: lightgrey;
+  min-height: 170px;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.service-item span p{
+  text-align: center;
+
+}
+.hook {
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+}
+.fact-item {
+  max-width: 100%;
+  min-height: 170px;
+  text-align: center;
+  background-color: lightblue;
+  margin: 1rem;
+  padding: 5rem;
+  border-radius: 10px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.author {
+  float: right;
+}
+.copyright {
+  float: left;
+}
+
+.navbar-bottom {
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  background-color:black;
+  color: white;
+  text-align: center
+}

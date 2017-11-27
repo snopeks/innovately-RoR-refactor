@@ -1,2 +1,11 @@
-<h1>Blogs#edit</h1>
-<p>Find me in app/views/blogs/edit.html.erb</p>
+
+<div> <%= @blog.title %> </div>
+<% form_for @blog do |f| %>
+  <div>
+    <%= f.text_field :title, placeholder: f.title %>
+  </div>
+  <div>
+    <%= f.text_field :content, placeholder: f.content %>
+  </div>
+  <%= f.submit %>
+<% end %>

@@ -1,15 +1,24 @@
-<div class="container">
-  <div class="row">
+<div class="ideas container">
+  <div id="ideas-page" class="row">
+    <div class="col-sm-12">
+        <h4> Your ideas </h4>
+        <%= link_to "New Idea", new_idea_path %>
+        <div class="row">
+          <% current_user.blogs().each do |b|%>
+            <div class="card-col col-sm-3">
+              <div class="card idea-card">
+                <div class="card-body">
+                  <h4 class="card-title"><%= b.title %> </h4>
+                  <p class="card-text"><%= b.content %> </p>
+                  <%= link_to "Edit Idea", edit_blog_path(b.id) %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+    </div>
     <div class="col-sm-4">
-      <% current_user.blogs().each do |b|%>
-        <div class="card" style="width: 20rem;">
-          <div class="card-body">
-            <h4 class="card-title"><%= b.title %> </h4>
-            <p class="card-text"><%= b.content %> </p>
-            <%= link_to "Edit Blog" %>
-          </div>
-        </div>
-      <% end %>
+
     </div>
   </div>
 </div>
