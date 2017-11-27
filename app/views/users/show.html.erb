@@ -1,23 +1,33 @@
-<h2>Your profile</h2>
-<div>
-  Welcome, <%= @user.name %>!
-</div>
-<h3> Your blogs</h3>
-<%= link_to "New Blogpost", "/users/:id/blogs/new" %>
-  <ul>
-    <% @user.blogs().each do |blog|%>
-      <li> <%= blog.title %></li>
-    <% end %>
-  </ul>
-<div>
-
-
-<div class="card" style="width: 20rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h4 class="card-title">Card title</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container profile-container">
+  <div id="profile" class="row">
+    <h3>Your profile</h3>
+    <div class="col-sm-4">
+      <p> Hi, <%= current_user.name %>!</p>
+      <p> Your email: <%= current_user.email %> </p>
+    </div>
+    <div class="col-sm-4">
+      <p> You have logged <%= current_user.blogs().length %> ideas!</p>
+      <div class="card profile-card" style="width: 20rem;">
+        <ul class="list-group list-group-flush">
+          <% current_user.blogs().each do |b| %>
+          <li class="list-group-item"><%=b.title%> </li>
+          <% end %>
+        </ul>
+        <p><%= link_to "Create New Idea", new_idea_path %></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <p> Favorite Ideas </p>
+      <div class="card" style="width: 20rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Fav idea 1</li>
+          <li class="list-group-item">Fav idea 2</li>
+          <li class="list-group-item">Fav idea 3</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+
+
 
